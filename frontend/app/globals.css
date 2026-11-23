@@ -1,0 +1,171 @@
+/* Component styles; the dealt :root palette block lives inline in app/layout.tsx,
+   after the kit stylesheets, so it overrides system.css defaults. */
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+
+html:has(.chat-page),
+body:has(.chat-page) { height: 100%; overflow: hidden; }
+.chat-page {
+  display: flex; flex-direction: column; height: 100vh; height: 100dvh;
+  min-height: 0; color: var(--p-ink);
+  background-color: var(--p-bg);
+  background-image:
+    linear-gradient(rgb(19 22 18 / 0.66), rgb(19 22 18 / 0.66)),
+    url("/assets/img/photo-f76003914-500.webp");
+  background-position: center;
+  background-size: cover;
+}
+.chat-page__header {
+  display: flex; flex: none; align-items: center; gap: var(--s-4);
+  min-height: 64px; padding: 0 clamp(16px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+}
+.chat-page__subtitle { color: var(--p-muted); font-size: 13px; }
+.chat-page__main {
+  display: flex; flex: 1 1 0; justify-content: center;
+  min-height: 0; padding: clamp(12px, 2.4vw, 32px);
+}
+.chat-page .morris-chat {
+  width: 100%; max-width: 1120px; height: 100%; min-height: 0;
+  overflow: hidden; border: 1px solid var(--line);
+  border-radius: var(--r-lg); box-shadow: 0 24px 64px rgb(0 0 0 / 0.18);
+}
+.morris-chat {
+  display: flex; flex-direction: column;
+  background: var(--p-surface); color: var(--p-ink);
+}
+.morris-chat .ui-head { flex: none; }
+.morris-chat__avatar { border-radius: 50%; object-fit: cover; flex: none; }
+.morris-chat__clear {
+  border: 0; background: none; font: 500 13px/1 var(--font-text); color: var(--u-muted, var(--p-muted));
+  cursor: pointer; padding: 6px 8px; border-radius: 6px;
+  transition: color 160ms ease, background 160ms ease;
+}
+.morris-chat__clear:hover { color: var(--u-ink, var(--p-ink)); background: var(--u-fill, rgb(255 255 255 / 0.06)); }
+.chat-page .morris-chat__body {
+  flex: 1 1 0%; min-height: 0; overflow-y: auto;
+  overscroll-behavior: contain; scrollbar-gutter: stable;
+  display: grid; grid-auto-rows: max-content; align-content: start; font-size: 14px;
+}
+.morris-chat__body .ui-msg { font-size: 14px; line-height: 21px; }
+.chat-page .morris-chat__body .ui-msg--bot { max-width: min(72ch, 100%); }
+.chat-page .morris-chat__body .ui-msg--me { max-width: min(72ch, 85%); }
+.morris-chat__start {
+  align-self: center; justify-self: center; text-align: center;
+  display: grid; gap: var(--s-4); justify-items: center;
+  max-width: 340px; margin: auto; padding: var(--s-5) 0;
+}
+.morris-chat__start-line { margin: 0; color: var(--u-text-2, var(--p-muted)); font-size: 14px; line-height: 1.6; }
+.morris-chat__elapsed { margin: 0; font: 500 14px/1 var(--font-mono); color: var(--u-muted, var(--p-muted)); }
+.morris-chat__notice { margin: 0; font-size: 13px; line-height: 1.5; color: var(--u-muted, var(--p-muted)); }
+.morris-chat__dots { display: inline-flex; gap: 4px; padding: 6px 0; }
+.morris-chat__dots i {
+  width: 5px; height: 5px; border-radius: 50%; background: var(--u-muted, var(--p-muted));
+  animation: morris-dot 900ms ease-in-out infinite;
+}
+.morris-chat__dots i:nth-child(2) { animation-delay: 150ms; }
+.morris-chat__dots i:nth-child(3) { animation-delay: 300ms; }
+@keyframes morris-dot {
+  0%, 60%, 100% { transform: none; opacity: 0.45; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .morris-chat__dots i { animation: none; opacity: 0.7; }
+}
+.morris-chat__inputrow {
+  flex: none; display: flex; align-items: flex-end; gap: 8px;
+  margin: 0 16px 16px; padding: 5px 5px 5px 12px;
+  border-radius: 10px; background: var(--u-fill, rgb(255 255 255 / 0.05));
+  box-shadow: inset 0 0 0 1px var(--u-line-2, rgb(255 255 255 / 0.12));
+}
+.morris-chat__input {
+  flex: 1; border: 0; background: none; resize: none;
+  font: 400 14px/20px var(--font-text); color: var(--u-ink, var(--p-ink));
+  padding: 10px 0; min-height: 44px; max-height: 120px; outline: none;
+}
+.morris-chat__input::placeholder { color: var(--u-soft, var(--p-muted)); }
+.morris-chat__input:disabled { opacity: 0.55; }
+.morris-chat__send {
+  display: grid; place-items: center; width: 44px; height: 44px; flex: none;
+  border: 0; border-radius: 7px; cursor: pointer;
+  background: var(--action, var(--p-action)); color: var(--action-ink, var(--p-action-ink));
+  transition: transform 120ms ease, opacity 160ms ease;
+}
+.morris-chat__send:hover:not(:disabled) { transform: translateY(-1px); }
+.morris-chat__send:active:not(:disabled) { transform: translateY(0); }
+.morris-chat__send:disabled { opacity: 0.4; cursor: default; }
+@media (max-width: 639px) {
+  .chat-page__header { min-height: 56px; gap: 12px; padding-inline: 16px; }
+  .chat-page__subtitle { max-width: 16ch; font-size: 11px; line-height: 1.3; }
+  .chat-page__main { padding: 8px; }
+  .chat-page .morris-chat { border-radius: var(--r-md); }
+  .morris-chat__inputrow { margin: 0 10px 10px; }
+}
+
+/* ---- The life cards: three-up from 1024 (their panels fit 300px, so the kit's 1024-1279
+   two-up rule for span-4 panels is not needed: these cards carry no span class); text beside
+   the panel from 640 to 1023; stacked on a phone. ---- */
+.life-cards > .card { grid-column: 1 / -1; }
+@media (min-width: 1024px) {
+  .life-cards > .card { grid-column: auto / span 4; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .life-cards > .card {
+    display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-auto-rows: min-content; column-gap: var(--s-6); align-content: start;
+  }
+  .life-cards > .card > :not(.panel) { grid-column: 1; }
+  .life-cards > .card > .panel { grid-column: 2; grid-row: 1 / span 3; --p-h: 232px; }
+}
+.life-cards .panel { --p-h: 300px; }
+@media (max-width: 639px) {
+  .life-cards .panel { --p-h: 216px; }
+}
+
+/* ---- The questions section: the portrait under the h2 on the column lines. ---- */
+.questions-portrait {
+  display: block; width: 100%; height: 400px; object-fit: cover; object-position: 50% 20%;
+  border-radius: var(--r-lg); margin-top: var(--s-6);
+}
+@media (max-width: 1023px) {
+  .questions-portrait { height: 320px; }
+}
+/* the stacked sections need two screens at the tablet (layout-v4.md section 2) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #questions { --h: 2; }
+  #life { --h: 2; }
+}
+
+/* ---- The close: "William Morris" hand-set so it ends on the wrap lines at every width. ---- */
+.closing .close__word { font-size: min(10vw, 150px); }
+
+/* ---- The introduction gate (the brief asks for it: an entry introduction before the site). ---- */
+html.gate-open { overflow: hidden; }
+.gate {
+  position: fixed; inset: 0; z-index: 40;
+  display: grid; place-items: center;
+  background: rgb(12 12 12 / 0.72);
+  padding: var(--s-5);
+}
+.gate__card {
+  display: flex; flex-direction: column;
+  width: min(640px, 100%); max-height: calc(100svh - 2 * var(--s-5));
+  background: var(--p-inv-bg); color: var(--p-inv-ink);
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: 0 40px 80px -32px rgb(0 0 0 / 0.6);
+}
+.gate__text { display: grid; gap: var(--s-4); padding: var(--s-7) var(--s-7) var(--s-6); overflow-y: auto; }
+.gate__label { color: var(--p-inv-muted); margin: 0; }
+.gate__text h2 { margin: 0; font: var(--display-weight) 32px/1.15 var(--font-display); letter-spacing: var(--display-tracking); }
+.gate__text p { margin: 0; font-size: 16px; line-height: 1.6; }
+.gate__text .btn { justify-self: start; margin-top: var(--s-2); --action: var(--p-inv-action); --action-ink: var(--p-inv-action-ink); }
+.gate__flora { flex: none; width: 100%; height: 132px; object-fit: cover; object-position: 50% 30%; }
+@media (max-width: 639px) {
+  .gate { padding: var(--s-3); }
+  .gate__text { padding: var(--s-5) var(--s-5) var(--s-4); }
+  .gate__text h2 { font-size: 26px; }
+  .gate__flora { height: 96px; }
+}
