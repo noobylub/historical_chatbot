@@ -1,6 +1,6 @@
 import { MORRIS_SYSTEM_PROMPT } from "@/lib/persona";
 
-export const maxDuration = 300;
+export const maxDuration = 299;
 
 type Msg = { role: "user" | "assistant"; content: string };
 
