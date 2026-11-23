@@ -6,6 +6,8 @@ morris_corpus_labeled/corpus.jsonl
 
 # dependencies
 /node_modules
+/frontend/.agents/
+/frontend/.taste-skill/
 /frontend/node_modules
 /.pnp
 /frontend/.pnp

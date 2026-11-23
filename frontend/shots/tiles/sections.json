@@ -1,0 +1,98 @@
+{
+ "url": "http://localhost:3000/",
+ "views": {
+  "desktop": {
+   "width": 1440,
+   "height": 900,
+   "navH": 72,
+   "scrollHeight": 4500,
+   "screens": 5,
+   "sections": [
+    {
+     "n": 1,
+     "tag": "section",
+     "id": "chat",
+     "cls": "hero hero--collage",
+     "top": 0,
+     "h": 900,
+     "hScreens": 1,
+     "offGrid": 0,
+     "tiles": [
+      {
+       "file": "desktop-sec-01-a.jpg",
+       "scrollY": 0
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "tag": "section",
+     "id": "life",
+     "cls": "section",
+     "top": 900,
+     "h": 900,
+     "hScreens": 1,
+     "offGrid": 0,
+     "tiles": [
+      {
+       "file": "desktop-sec-02-a.jpg",
+       "scrollY": 900
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "tag": "section",
+     "id": "creed",
+     "cls": "section statement ground-inverse",
+     "top": 1800,
+     "h": 900,
+     "hScreens": 1,
+     "offGrid": 0,
+     "tiles": [
+      {
+       "file": "desktop-sec-03-a.jpg",
+       "scrollY": 1800
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "tag": "section",
+     "id": "questions",
+     "cls": "section",
+     "top": 2700,
+     "h": 900,
+     "hScreens": 1,
+     "offGrid": 0,
+     "tiles": [
+      {
+       "file": "desktop-sec-04-a.jpg",
+       "scrollY": 2700
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "tag": "footer",
+     "id": "contact",
+     "cls": "footer closing footer--statement",
+     "top": 3600,
+     "h": 900,
+     "hScreens": 1,
+     "offGrid": 0,
+     "tiles": [
+      {
+       "file": "desktop-sec-05-a.jpg",
+       "scrollY": 3600
+      }
+     ]
+    }
+   ],
+   "consoleErrors": [
+    "exception: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:"
+   ]
+  }
+ },
+ "at": "2026-11-22T21:17:31.285Z"
+}

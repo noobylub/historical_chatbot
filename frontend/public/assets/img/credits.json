@@ -1,0 +1,99 @@
+{
+ "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+ "photos": [
+  {
+   "file": "photo-f64735725.webp",
+   "files": [
+    "photo-f64735725-500.webp",
+    "photo-f64735725-960.webp",
+    "photo-f64735725.webp"
+   ],
+   "id": "f64735725",
+   "alt": "Textile, The Strawberry Thief, designed 1883",
+   "by": "William Morris",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Textile,_The_Strawberry_Thief,_designed_1883_(CH_18386443).jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f76003914-500.webp",
+   "files": [
+    "photo-f76003914-500.webp"
+   ],
+   "id": "f76003914",
+   "alt": "Strawberry Thief",
+   "by": "William Morris",
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "page": "https://commons.wikimedia.org/wiki/File:Clevelandart_1937.696.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f29855149-500.webp",
+   "files": [
+    "photo-f29855149-500.webp"
+   ],
+   "id": "f29855149",
+   "alt": "\"Pimpernel\"",
+   "by": "William Morris",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:William_Morris_-_%22Pimpernel%22_-_Google_Art_Project.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f2444407-500.webp",
+   "files": [
+    "photo-f2444407-500.webp"
+   ],
+   "id": "f2444407",
+   "alt": "Morris St James 1880",
+   "by": "William Morris",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Morris_St_James_1880.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f130244616-500.webp",
+   "files": [
+    "photo-f130244616-500.webp"
+   ],
+   "id": "f130244616",
+   "alt": "William Morris 11",
+   "by": "Okänd bildupphovsman",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:William_Morris_11.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f137472877-960.webp",
+   "files": [
+    "photo-f137472877-500.webp",
+    "photo-f137472877-960.webp"
+   ],
+   "id": "f137472877",
+   "alt": "News From Nowhere",
+   "by": "Southport1639",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:News_From_Nowhere.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f56569535-500.webp",
+   "files": [
+    "photo-f56569535-500.webp"
+   ],
+   "id": "f56569535",
+   "alt": "Daisy wall hangings, designed by William Morris for Red House, worked by William and Jane Morris, 1860, couched wools on wool serge - Kelmscott Manor - Oxfordshire, England - DSC09983",
+   "by": "Daderot",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Daisy_wall_hangings,_designed_by_William_Morris_for_Red_House,_worked_by_William_and_Jane_Morris,_1860,_couched_wools_on_wool_serge_-_Kelmscott_Manor_-_Oxfordshire,_England_-_DSC09983.jpg",
+   "source": "Wikimedia Commons"
+  }
+ ]
+}
